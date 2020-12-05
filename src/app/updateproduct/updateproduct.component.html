@@ -1,0 +1,41 @@
+
+<body>
+    
+    <div class="col-md-4 offset-md-4 ">
+    <div class="card   ">
+        <div class="alert alert-info" role="alert" *ngIf='isUpdated'>
+            Product updated  successfully!!
+          </div>
+        <div class="card-body" >
+            <h3 class="card-title text-center">Update Product</h3>
+
+<form [formGroup]='regForm' (ngSubmit)='onSubmit()' *ngIf='regForm'>
+   
+    <input type="hidden" class="form-control" name="id" id="id" formControlName='id' pattern="[A-Za-z0-9]*">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" name="name" id="name" formControlName='name' pattern="[A-Za-z0-9]*">
+    </div>
+    <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input type="text" class="form-control" name="quantity" id="quantity" formControlName='quantity' pattern="[0-9]*">
+    </div>
+    <div class="form-group">
+        <label for="imageUrl">Image Url</label>
+        <input type="text" class="form-control" name="imgurl" id="imgurl" formControlName='imgurl'>
+    </div>
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" class="form-control" name="price" id="price" formControlName='price' pattern="[0-9]*">
+    </div>
+    <div class="form-group">
+        <label for="details">Details</label>
+        <textarea class="form-control " name="details" id="details" formControlName='details' rows="3 "></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+            
+</form>
+</div>
+</div>
+</div>
+</body>

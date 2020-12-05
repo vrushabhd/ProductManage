@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">MyProducts</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <!-- step 4 -->
+          <a class="nav-link" routerLink="home" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="add-product">Add Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="fetchall">Fetech All</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="search-all">Search</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="update-product/:id">Update Product</a>
+          </li>
+      </ul>
+      <div class="navbar-nav">
+        <!-- <div><a class="nav-link float-right" style="text-decoration: none;" routerLink="/login" >Login</a></div> -->
+        <!-- <div class="float-right" (click)='onClick(6)' style="text-decoration: none; cursor: pointer;" (click)='logout()' *ngIf='isLogedin()'>Logout</div> -->
+    </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>

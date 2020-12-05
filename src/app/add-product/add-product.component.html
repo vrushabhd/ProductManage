@@ -1,0 +1,70 @@
+<body>
+    <h1>h</h1>
+<div class="col-md-4 offset-md-4 ">
+    <div class="card mt-5  ">
+        <div class="alert alert-info" role="alert" *ngIf='isAdded'>
+            Product added to database successfully!!
+          </div>
+        <div class="card-body" >
+            <h3 class="card-title text-center">Register Product</h3>
+    <form [formGroup]="regForm" (ngSubmit)="onSubmit()" >
+    
+    <div class="form-group">
+    <label >Name</label>
+    <input type="text"  name="name" class="form-control" placeholder="Enter the Name" formControlName ="name" >  
+    <div style="color:red;" *ngIf="regForm.get('name').touched && regForm.get('name').dirty && regForm.get('name').value.length < 3">enter the name</div>
+    
+    
+    
+    
+    
+    </div>
+    <div class="form-group">
+        <label >Price</label>
+        <input type="text" name="price" class="form-control" placeholder="Enter the Price" formControlName="price" >  
+        <div style="color:red;" *ngIf="regForm.get('price').touched && regForm.get('price').dirty && regForm.get('price').value.length < 1">Enter the price</div>
+    
+        
+    
+        </div>
+    
+        <div class="form-group">
+            <label >Quantity</label>
+            <input type="text" name="quantity" class="form-control" placeholder="Enter the quantity" formControlName="quantity" >  
+            <div style="color:red;" *ngIf="regForm.get('quantity').touched && regForm.get('quantity').dirty && regForm.get('quantity').value.length < 1">Enter the quantity</div>
+
+            
+        
+            </div>
+            
+        <div class="form-group">
+            <label >Image Url</label>
+            <input type="text" name="imgurl" class="form-control" placeholder="Enter the quantity" formControlName="imgurl" >  
+            <div style="color:red;" *ngIf="regForm.get('imgurl').touched && regForm.get('imgurl').dirty && regForm.get('imgurl').value.length < 1">Enter the Image Url</div>
+
+            
+        
+            </div>
+                
+        <div class="form-group">
+            <label >Details</label>
+            <textarea type="text" name="details" class="form-control" placeholder="Enter the Details" formControlName="details"    >  </textarea>
+            <div style="color:red;" *ngIf="regForm.get('details').touched && regForm.get('details').dirty && regForm.get('details').value.length < 5">Enter the Details</div>
+
+            
+        
+            </div>
+        
+            <div>
+                <button type="submit" class="btn btn-secondary" name="submit" [disabled]="!regForm.valid">Submit</button>
+                <button type="reset" class="btn btn-secondary ml-2" name="reset">Reset</button>
+            </div>
+                
+            
+              
+    </form>
+    </div>
+    </div>
+    </div>
+
+</body>
